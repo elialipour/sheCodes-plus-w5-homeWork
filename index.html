@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="src/styles.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+      integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+
+  <body class="bg-black text-white">
+    <div class="content w-75 border border-3 border-white rounded-3 mx-auto">
+      <nav class="navbar">
+        <div
+          class="container-fluid w-75 border-bottom border-3 border-white p-4 mx-auto"
+        >
+          <a id="city_name" class="navbar-brand text-white fs-3">City Name</a>
+          <form id="search_form" class="d-flex" role="search">
+            <input
+              id="search_input"
+              class="form-control me-2 bg-transparent text-white-65"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-primary" type="submit">
+              Search
+            </button>
+          </form>
+          <button
+            id="current_location"
+            class="btn btn-outline-success"
+            type="button"
+          >
+            Current
+          </button>
+        </div>
+      </nav>
+
+      <section class="w-75 mx-auto">
+        <div class="row">
+          <div class="col m-lg-3">
+            <div class="row py-3 mb-5">
+              <h4 id="date_day"></h4>
+              <h5 id="date_month"></h5>
+              <h6 id="date_year"></h6>
+            </div>
+            <div id="weather_humidity" class="row py-2 mx-1"></div>
+            <div id="wind_speed" class="row py-2 mx-1"></div>
+          </div>
+          <div class="col text-center my-auto p-3">
+            <span id="weather_icon" class="emoji">
+              <img src="#" alt="" width="200" />
+            </span>
+          </div>
+          <div class="col text-center my-auto p-3">
+            <div class="temp fs-3 mt-3">
+              <span
+                ><button
+                  id="temp-celsius"
+                  class="degree-selector bg-transparent border-0 text-white"
+                >
+                  °C
+                </button></span
+              >
+              <span>|</span>
+              <span
+                ><button
+                  id="temp-fahrenheit"
+                  class="degree-selector bg-transparent border-0 text-white"
+                >
+                  °F
+                </button>
+              </span>
+            </div>
+            <div class="degree">
+              <span id="degree_attribute">0</span>
+            </div>
+            <div id="weather_description" class="fs-4"></div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <section class="w-75 border-top border-3 border-white mx-auto">
+          <div class="row text-center p-3 my-3">
+            <div class="col">
+              <div class="fs-4 mb-3">☀️</div>
+              <div>Saturday</div>
+            </div>
+            <div class="col">
+              <div class="fs-4 mb-3">⛅</div>
+              <div>Sunday</div>
+            </div>
+            <div class="col">
+              <div class="fs-4 mb-3">☁️</div>
+              <div>Monday</div>
+            </div>
+            <div class="col">
+              <div class="fs-4 mb-3">🌧️</div>
+              <div>Tuesday</div>
+            </div>
+            <div class="col">
+              <div class="fs-4 mb-3">⛈️</div>
+              <div>Wednesday</div>
+            </div>
+          </div>
+        </section>
+      </footer>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
